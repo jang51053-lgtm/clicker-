@@ -134,7 +134,7 @@
                 <div class="bg-white rounded-xl shadow p-4 border-t-4 border-blue-400">
                     <h2 class="font-bold text-lg mb-3 font-sans">⚡ 보유 스킬</h2>
                     <div id="owned-skills" class="space-y-2">
-                        <p class="text-xs text-gray-400 text-center py-4 font-sans leading-tight">난제 해결 시 스킬 획득 가능</p>
+                        <!-- JS에서 생성 -->
                     </div>
                 </div>
             </div>
@@ -145,22 +145,22 @@
         <div class="grid grid-cols-1 md:grid-cols-4 gap-4 pb-10 font-sans">
             <div class="bg-white rounded-xl shadow p-4 border-t-4 border-green-400">
                 <h2 class="font-bold text-gray-700 mb-1 text-sm">🛡️ 약수 가디언</h2>
-                <p class="text-[10px] text-gray-400 mb-2">현재 숫자의 약수일 때 포인트 자동 생산</p>
-                <div id="factors-list" class="grid grid-cols-2 gap-2 max-h-48 overflow-y-auto custom-scroll pr-1"></div>
+                <p class="text-[10px] text-gray-400 mb-2 font-sans">현재 숫자의 약수일 때 포인트 자동 생산</p>
+                <div id="factors-list" class="grid grid-cols-2 gap-2 max-h-48 overflow-y-auto custom-scroll pr-1 text-[10px]"></div>
             </div>
             <div class="bg-white rounded-xl shadow p-4 border-t-4 border-blue-400">
                 <h2 class="font-bold text-gray-700 mb-1 text-sm">📐 도형 상점</h2>
-                <p class="text-[10px] text-gray-400 mb-2">모든 생산량 영구 보너스 추가</p>
+                <p class="text-[10px] text-gray-400 mb-2 font-sans">모든 생산량 영구 보너스 추가</p>
                 <div id="shape-list" class="space-y-1.5 max-h-48 overflow-y-auto custom-scroll pr-1"></div>
             </div>
             <div class="bg-white rounded-xl shadow p-4 border-t-4 border-pink-400">
                 <h2 class="font-bold text-gray-700 mb-1 text-sm">💎 소수 수집</h2>
-                <p class="text-[10px] text-gray-400 mb-2">클릭 한 번당 얻는 포인트를 영구 증가</p>
-                <div id="prime-list" class="grid grid-cols-2 gap-2 max-h-48 overflow-y-auto custom-scroll pr-1"></div>
+                <p class="text-[10px] text-gray-400 mb-2 font-sans">클릭 한 번당 얻는 포인트를 영구 증가</p>
+                <div id="prime-list" class="grid grid-cols-2 gap-2 max-h-48 overflow-y-auto custom-scroll pr-1 text-[10px]"></div>
             </div>
             <div class="bg-white rounded-xl shadow p-4 border-t-4 border-yellow-500">
                 <h2 class="font-bold text-gray-700 mb-1 text-sm">🎁 전리품 보관함</h2>
-                <p class="text-[10px] text-gray-400 mb-2">보유 코인 및 학급용 경험치 쿠폰</p>
+                <p class="text-[10px] text-gray-400 mb-2 font-sans">보유 코인 및 획득한 쿠폰</p>
                 <div id="loot-box" class="space-y-2 max-h-48 overflow-y-auto custom-scroll pr-1 text-[10px]"></div>
             </div>
         </div>
@@ -204,7 +204,7 @@
             <h3 class="text-xl font-bold mb-4 text-center">📊 확률 정보 안내</h3>
             <div class="space-y-5">
                 <div>
-                    <h4 class="font-bold text-orange-600 mb-2 border-b pb-1">🎟️ 쿠폰 뽑기 확률</h4>
+                    <h4 class="font-bold text-orange-600 mb-2 border-b pb-1 font-sans">🎟️ 쿠폰 뽑기 확률</h4>
                     <ul class="text-[11px] space-y-1">
                         <li class="flex justify-between"><span>✨ 올패스 (x100)</span> <span class="font-bold">0.5%</span></li>
                         <li class="flex justify-between"><span>⏰ 1시간 패스</span> <span class="font-bold">1%</span></li>
@@ -215,7 +215,7 @@
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-bold text-red-600 mb-2 border-b pb-1">🔥 난제 보상 확률</h4>
+                    <h4 class="font-bold text-red-600 mb-2 border-b pb-1 font-sans">🔥 난제 보상 확률</h4>
                     <ul class="text-[11px] space-y-1">
                         <li class="flex justify-between"><span>👦 현우: 즉시 2배</span> <span>5%</span></li>
                         <li class="flex justify-between"><span>💻 대로: 상점 해킹</span> <span>5%</span></li>
@@ -226,10 +226,10 @@
                 </div>
                 <div class="bg-red-50 p-2 rounded border border-red-100">
                     <h4 class="text-[11px] font-bold text-red-700 mb-1">👾 바이러스 인카운터 (0.5%)</h4>
-                    <p class="text-[10px] text-red-600">클릭 시 0.5% 확률로 발생. 제한시간 5초 내에 GCD/LCM 문제를 풀어야 함. 실패 시 현재 숫자 50% 파괴.</p>
+                    <p class="text-[10px] text-red-600">클릭 시 0.5% 확률 발생. 5초 내 해결. 실패 시 숫자 50% 파괴.</p>
                 </div>
             </div>
-            <button class="mt-6 w-full py-3 bg-gray-800 text-white rounded-xl font-bold" onclick="closeProbModal()">닫기</button>
+            <button class="mt-6 w-full py-3 bg-gray-800 text-white rounded-xl font-bold font-sans" onclick="closeProbModal()">닫기</button>
         </div>
     </div>
 
@@ -285,7 +285,7 @@
         const formatNumber = (num) => {
             if (num === 0) return "0";
             if (num < 1000) return Math.floor(num).toLocaleString();
-            const units = ["", "K", "M", "B", "T", "Qa", "Qi", "Sx", "Sp", "Oc", "No", "Dc"];
+            const units = ["", "K", "M", "B", "T", "Qa", "Qi", "Sx", "Sp", "Oc", "No", "Dc", "Ud"];
             const unitIdx = Math.floor(Math.log10(num) / 3);
             const val = num / Math.pow(10, unitIdx * 3);
             return val.toFixed(2).replace(/\.00$/, '').replace(/(\.[0-9])0$/, '$1') + units[unitIdx];
@@ -348,15 +348,13 @@
                 const val = parseInt(f);
                 if (state.currentNumber % val === 0) total += state.hiredFactors[f] * (val * 0.5);
             }
-            total *= (state.globalMultiplier * Math.pow(10, state.coinCount) * state.allPassMultiplier);
+            total *= (state.globalMultiplier * state.allPassMultiplier);
             state.lastCps = total;
             return total;
         }
 
         function handleClick(e) {
             if (state.isVirusActive) return;
-            
-            // 바이러스 확률 0.5% (Math.random() < 0.005)
             if (Math.random() < 0.005) { triggerVirus(); return; }
 
             let gain = (state.baseCpc + state.primeBonus) * state.allPassMultiplier;
@@ -418,11 +416,11 @@
             state.isVirusActive = false;
             virusModal.classList.add('hidden');
             mainBody.classList.remove('virus-alert-bg');
-            if (success) showMessage("✅ 바이러스 차단 완료!");
+            if (success) showMessage("✅ 시스템 복구 완료!");
             else {
                 state.currentNumber = Math.max(2, Math.floor(state.currentNumber / 2));
                 state.baseCpc = state.currentNumber;
-                showMessage("❌ 바이러스 공격! 숫자 반토막.");
+                showMessage("❌ 시스템 공격! 숫자가 파괴되었습니다.");
                 updateUI(); updateFactors(); updateMultiples();
             }
         }
@@ -453,7 +451,7 @@
 
         function showMessage(text) {
             msgBox.innerText = text; msgBox.style.opacity = '1';
-            setTimeout(() => { msgBox.style.opacity = '0'; }, 2000);
+            setTimeout(() => { msgBox.style.opacity = '0'; }, 2500);
         }
 
         function updateScoreOnly() {
@@ -473,35 +471,35 @@
 
         function updateRewardShop() {
             rewardShop.innerHTML = '';
-            // 코인: 500k 시작, 1만배 증가
-            const coinCost = 500000 * Math.pow(10000, state.coinCount);
-            const couponCost = 50000 * Math.pow(1000, state.couponCount);
+            // 코인: 50M 시작, 10만배 증가
+            const coinCost = 50000000 * Math.pow(100000, state.coinCount);
+            // 쿠폰: 50K 시작, 10만배 증가 (요청 사항 반영)
+            const couponCost = 50000 * Math.pow(100000, state.couponCount);
 
             const createBtn = (title, icon, cost, desc, onClick) => {
                 const btn = document.createElement('button'); btn.dataset.cost = cost;
                 btn.className = "w-full p-3 bg-gray-50 border-2 border-gray-200 rounded-xl flex flex-col items-center opacity-60 grayscale transition-all shadow-sm mb-2";
-                btn.innerHTML = `<div class="flex items-center gap-1 mb-1 text-sm font-bold">${icon} ${title}</div><p class="text-[9px] text-gray-500 mb-1 font-sans text-center">${desc}</p><span class="bg-gray-800 text-white px-3 py-0.5 rounded-full text-xs font-sans font-bold">${formatNumber(cost)}</span>`;
+                btn.innerHTML = `<div class="flex items-center gap-1 mb-1 text-sm font-bold font-sans">${icon} ${title}</div><p class="text-[9px] text-gray-500 mb-1 font-sans text-center leading-tight">${desc}</p><span class="bg-gray-800 text-white px-3 py-0.5 rounded-full text-xs font-sans font-bold">${formatNumber(cost)}</span>`;
                 btn.onclick = onClick;
                 return btn;
             };
 
-            rewardShop.appendChild(createBtn("코인 구매", "🪙", coinCost, "모든 생산량 영구 10배 상승 (가격 1만배 증가)", () => {
-                if (state.points >= coinCost) { state.points -= coinCost; state.coinCount++; showMessage("코인 획득! 생산 효율 10배!"); updateRewardShop(); updateLootUI(); }
+            rewardShop.appendChild(createBtn("코인 구매", "🪙", coinCost, "가치 높은 황금 코인 수집<br>(가격 10만배씩 폭등)", () => {
+                if (state.points >= coinCost) { state.points -= coinCost; state.coinCount++; showMessage("코인을 수집했습니다!"); updateRewardShop(); updateLootUI(); }
             }));
-            rewardShop.appendChild(createBtn("쿠폰 뽑기", "🎟️", couponCost, "확률적으로 올패스 및 경험치 획득", () => {
+            rewardShop.appendChild(createBtn("쿠폰 뽑기", "🎟️", couponCost, "올패스 및 경험치 획득 기회<br>(가격 10만배씩 폭등)", () => {
                 if (state.points >= couponCost) { state.points -= couponCost; state.couponCount++; drawCoupon(); updateRewardShop(); }
             }));
         }
 
         function drawCoupon() {
             const rand = Math.random() * 100;
-            // 올패스 0.5, 1시간 1, 1코인 10, 2경험 48.5, 1경험 30, 꽝 10
             if (rand <= 0.5) { state.allPassMultiplier *= 100; state.loot.allPass++; showMessage("✨ 초대박!! '올패스' (x100배)!"); }
             else if (rand <= 1.5) { state.points += state.lastCps * 3600; state.loot.hourPass++; showMessage("⏰ '1시간 패스'!"); }
-            else if (rand <= 11.5) { state.coinCount++; showMessage("🪙 '1 코인' 당첨! 효율 10배!"); updateRewardShop(); }
+            else if (rand <= 11.5) { state.coinCount++; showMessage("🪙 '1 코인' 당첨! 전리품함에 보관됩니다."); updateRewardShop(); }
             else if (rand <= 60.0) { state.loot.exp2++; showMessage("⭐ '2 경험치 쿠폰'!"); }
             else if (rand <= 90.0) { state.loot.exp1++; showMessage("🔸 '1 경험치 쿠폰'!"); }
-            else showMessage("💨 꽝...");
+            else showMessage("💨 꽝... 다음 기회에!");
             updateLootUI();
         }
 
@@ -509,19 +507,19 @@
             lootBox.innerHTML = '';
             const items = [
                 {id:'coin', n:'보유 코인', c:state.coinCount, i:'🪙', color:'text-yellow-600'},
-                {id:'exp2', n:'2 경험치', c:state.loot.exp2, i:'⭐', color:'text-green-600'},
-                {id:'exp1', n:'1 경험치', c:state.loot.exp1, i:'🔸', color:'text-green-500'},
+                {id:'exp2', n:'2 경험치 쿠폰', c:state.loot.exp2, i:'⭐', color:'text-green-600'},
+                {id:'exp1', n:'1 경험치 쿠폰', c:state.loot.exp1, i:'🔸', color:'text-green-500'},
                 {id:'hourPass', n:'1시간 패스', c:state.loot.hourPass, i:'⏰', color:'text-blue-500'},
-                {id:'allPass', n:'올패스', c:state.loot.allPass, i:'✨', color:'text-red-500'}
+                {id:'allPass', n:'올패스 (x100)', c:state.loot.allPass, i:'✨', color:'text-red-500'}
             ];
             items.forEach(item => {
                 if (item.c > 0) {
                     const div = document.createElement('div'); div.className = "flex justify-between items-center p-2 bg-gray-50 rounded border border-gray-100 mb-1";
-                    div.innerHTML = `<span class="${item.color} font-bold">${item.i} ${item.n}</span><span class="font-bold bg-white px-2 py-0.5 rounded border border-gray-200">${item.c}</span>`;
+                    div.innerHTML = `<span class="${item.color} font-bold font-sans">${item.i} ${item.n}</span><span class="font-bold bg-white px-2 py-0.5 rounded border border-gray-200 font-sans">${item.c}</span>`;
                     lootBox.appendChild(div);
                 }
             });
-            if (lootBox.innerHTML === '') lootBox.innerHTML = '<p class="text-gray-400 italic text-center py-4 font-sans text-[9px]">전리품 없음</p>';
+            if (lootBox.innerHTML === '') lootBox.innerHTML = '<p class="text-gray-400 italic text-center py-4 font-sans text-[9px]">비어있음</p>';
         }
 
         function updateSkillsUI() {
@@ -536,7 +534,7 @@
                     const bar = document.createElement('div'); bar.className = `absolute top-0 left-0 h-full transition-all duration-300 ${canUse ? 'bg-blue-400' : 'bg-gray-300'}`;
                     bar.style.width = `${progress}%`;
                     const btn = document.createElement('button'); btn.disabled = !canUse;
-                    btn.className = "absolute top-0 left-0 w-full h-full flex justify-between items-center px-4 font-bold text-xs text-gray-800 transition-colors";
+                    btn.className = "absolute top-0 left-0 w-full h-full flex justify-between items-center px-4 font-bold text-xs text-gray-800 transition-colors font-sans";
                     btn.innerHTML = `<span>${skill.name}</span><span class="text-[9px] font-sans font-bold opacity-60">${canUse ? 'READY' : Math.ceil((skill.cooldown - elapsed)/1000) + 's'}</span>`;
                     btn.onclick = () => {
                         state.skills[key].lastUsed = Date.now();
@@ -607,8 +605,8 @@
             shapes.forEach(s => {
                 const count = state[`shape_${s.n}`] || 0; const cost = s.c * Math.pow(2.5, count);
                 const btn = document.createElement('button'); btn.dataset.cost = cost;
-                btn.className = "w-full p-2 bg-blue-50 border-2 border-gray-200 rounded-lg flex justify-between items-center transition-all opacity-60 grayscale text-[10px]";
-                btn.innerHTML = `<div class="text-left font-bold"><span class="text-blue-600">${s.i} ${s.n}</span><span class="block text-[8px] text-gray-400 font-normal">${s.d}</span></div><span class="font-bold">💰${formatNumber(cost)}</span>`;
+                btn.className = "w-full p-2 bg-blue-50 border-2 border-gray-200 rounded-lg flex justify-between items-center transition-all opacity-60 grayscale text-[10px] font-sans";
+                btn.innerHTML = `<div class="text-left font-bold"><span class="text-blue-600">${s.i} ${s.n}</span><span class="block text-[8px] text-gray-400 font-normal font-sans">${s.d}</span></div><span class="font-bold font-sans">💰${formatNumber(cost)}</span>`;
                 btn.onclick = () => { if(state.points >= cost){ state.points -= cost; state[`shape_${s.n}`] = count + 1; state.globalMultiplier += s.b; updateShapeShop(); } };
                 shapeList.appendChild(btn);
             });
@@ -619,8 +617,8 @@
             primes.forEach(p => {
                 const count = state[`prime_${p}`] || 0; const cost = 50 * p * Math.pow(3, count);
                 const btn = document.createElement('button'); btn.dataset.cost = cost;
-                btn.className = "p-1.5 bg-pink-50 border-2 border-gray-200 rounded flex flex-col items-center opacity-60 grayscale transition-all text-[9px]";
-                btn.innerHTML = `<span class="font-bold text-pink-500">소수 ${p}</span><span class="text-[8px] text-gray-400">CPC +${p*2}</span><span class="font-bold mt-1">💰${formatNumber(cost)}</span>`;
+                btn.className = "p-1.5 bg-pink-50 border-2 border-gray-200 rounded flex flex-col items-center opacity-60 grayscale transition-all text-[9px] font-sans";
+                btn.innerHTML = `<span class="font-bold text-pink-500 font-sans">소수 ${p}</span><span class="text-[8px] text-gray-400 font-sans font-bold">CPC +${p*2}</span><span class="font-bold mt-1 font-sans">💰${formatNumber(cost)}</span>`;
                 btn.onclick = () => { if(state.points >= cost){ state.points -= cost; state[`prime_${p}`] = count + 1; state.primeBonus += (p * 2); updatePrimeShop(); } };
                 primeList.appendChild(btn);
             });
@@ -631,8 +629,8 @@
             divisors.sort((a,b) => b-a).forEach(div => {
                 const count = state.hiredFactors[div] || 0; const cost = Math.floor(15 * Math.pow(1.6, count) * div);
                 const btn = document.createElement('button'); btn.dataset.cost = cost;
-                btn.className = "guardian-btn flex flex-col items-center p-1.5 rounded-lg border-2 border-gray-200 transition-all opacity-60 grayscale text-[9px]";
-                btn.innerHTML = `<span class="font-bold text-gray-400 text-[8px] tracking-tighter">${formatNumber(div)}</span><span class="font-bold text-lg my-1">${formatNumber(div)}</span><span class="text-green-600 bg-green-50 px-1 rounded border border-green-100 font-bold">Lv.${count}</span><span class="mt-1 font-bold">💰${formatNumber(cost)}</span>`;
+                btn.className = "guardian-btn flex flex-col items-center p-1.5 rounded-lg border-2 border-gray-200 transition-all opacity-60 grayscale text-[9px] font-sans";
+                btn.innerHTML = `<span class="font-bold text-gray-400 text-[8px] tracking-tighter font-sans">${formatNumber(div)}</span><span class="font-bold text-lg my-1 font-sans">${formatNumber(div)}</span><span class="text-green-600 bg-green-50 px-1 rounded border border-green-100 font-bold font-sans">Lv.${count}</span><span class="mt-1 font-bold font-sans">💰${formatNumber(cost)}</span>`;
                 btn.onclick = () => { if (state.points >= cost) { state.points -= cost; state.hiredFactors[div] = count + 1; updateFactors(); } };
                 factorsList.appendChild(btn);
             });
@@ -642,8 +640,8 @@
             const options = [{ val: base * 2, isCorrect: true, cost: base * 10 }, { val: base * 5, isCorrect: true, cost: base * 40 }, { val: base + 1, isCorrect: false, cost: base * 5 }].sort(() => Math.random() - 0.5);
             options.forEach(opt => {
                 const btn = document.createElement('button'); btn.dataset.cost = opt.cost;
-                btn.className = "p-2 rounded-lg border-2 border-gray-200 flex flex-col items-center transition-all opacity-60 grayscale text-[10px] font-bold";
-                btn.innerHTML = `<span class="text-purple-700 text-lg">${formatNumber(opt.val)}</span><span class="text-[9px] text-gray-400">배수 점프</span><span class="mt-1">💰${formatNumber(opt.cost)}</span>`;
+                btn.className = "p-2 rounded-lg border-2 border-gray-200 flex flex-col items-center transition-all opacity-60 grayscale text-[10px] font-sans font-bold";
+                btn.innerHTML = `<span class="text-purple-700 text-lg font-sans">${formatNumber(opt.val)}</span><span class="text-[9px] text-gray-400 font-sans font-bold">배수 점프</span><span class="mt-1 font-sans">💰${formatNumber(opt.cost)}</span>`;
                 btn.onclick = () => { if (state.points >= opt.cost) { state.points -= opt.cost; if (opt.isCorrect || state.freeJumpActive) { state.currentNumber = opt.val; state.baseCpc = opt.val; state.freeJumpActive = false; showMessage("점프 성공!"); updateUI(); updateFactors(); updateMultiples(); } else { showMessage("실패!"); updateMultiples(); } } };
                 multiplesList.appendChild(btn);
             });
